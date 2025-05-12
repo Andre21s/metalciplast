@@ -117,7 +117,7 @@ h6,
 .navbar .navbar-brand {
     position: relative;
     padding-right: 50px;
-    height: 100px;
+    height: 90px;
     display: flex;
     align-items: center;
 }
@@ -228,7 +228,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/carousel-2.jpg) center center no-repeat;
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/bg-about.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -256,10 +256,22 @@ h6,
 
 
 /*** Features ***/
+#features {
+    background-image: url("../img/bg-section-somos.svg");
+    background-repeat: no-repeat;   
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.features-content span, .feature-title{
+    color: var(--light);
+}
+
 .btn-play {
     position: absolute;
     top: 50%;
-    right: -30px;
+    right: 43.5%;
     transform: translateY(-50%);
     display: block;
     box-sizing: content-box;
@@ -359,6 +371,49 @@ h6,
     opacity: 1;
 }
 
+/* ======================
+     ESTILOS PARA LOS BOTONES
+     ====================== */
+  .image-button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    /* ---- FIJAMOS ancho y alto idénticos ---- */
+    width: 150px;
+    height: 150px;
+
+    /* ---- Borde para distinguirlas ---- */
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+
+    /* opcional: margen interno si quieres espacio entre borde y la img */
+    /* padding: 2px; */
+  }
+  .image-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .image-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    transition: background 0.3s ease;
+  }
+  .image-button:hover::before {
+    background: rgba(0,0,0,0.3);
+  }
+  .image-button:hover img {
+    transform: scale(1.1);
+  }
+  /* Opcional: ajustar el alto fijo en XS, fluid en MD+ */
+  .thumb {
+    height: 150px;
+    object-fit: cover;
+  }
 
 /*** Service ***/
 .service-item {
@@ -697,4 +752,9 @@ h6,
 .copyright {
     color: #B0B9AE;
     border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.btn-primary{
+    background: var(--primary);
+    border: 1px solid var(--primary);
 }
