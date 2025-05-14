@@ -242,7 +242,6 @@ h6,
     color: var(--light);
 }
 
-
 /*** Facts ***/
 .facts {
     position: relative;
@@ -420,6 +419,7 @@ h6,
     position: relative;
     margin: 65px 0 25px 0;
     box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    cursor: pointer;
 }
 
 .service-item .service-img {
