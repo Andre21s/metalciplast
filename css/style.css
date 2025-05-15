@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #16a333;     
-    --secondary: #4D774E;   
-    --light: #F1F7ED;     
-    --dark: #1E2D2F;      
+    --primary: #16a333;
+    --secondary: #4D774E;
+    --light: #F1F7ED;
+    --dark: #1E2D2F;
 }
 
 .back-to-top {
@@ -157,7 +157,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -168,6 +168,7 @@ h6,
 }
 
 @media (min-width: 992px) {
+
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -218,7 +219,7 @@ h6,
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -242,6 +243,14 @@ h6,
     color: var(--light);
 }
 
+/*** About ***/
+#about-left {
+    background-image: url("../img/bg-somos3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /*** Facts ***/
 .facts {
     position: relative;
@@ -257,13 +266,14 @@ h6,
 /*** Features ***/
 #features {
     background-image: url("../img/bg-section-somos.svg");
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.features-content span, .feature-title{
+.features-content span,
+.feature-title {
     color: var(--light);
 }
 
@@ -370,10 +380,22 @@ h6,
     opacity: 1;
 }
 
+#logisticaCarousel .carousel-inner {
+    height: auto;
+    background-color: #f5f5f5 !important;
+}
+
+
+#logisticaCarousel .carousel-item img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
 /* ======================
      ESTILOS PARA LOS BOTONES
      ====================== */
-  .image-button {
+.image-button {
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -388,31 +410,36 @@ h6,
 
     /* opcional: margen interno si quieres espacio entre borde y la img */
     /* padding: 2px; */
-  }
-  .image-button img {
+}
+
+.image-button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-  }
-  .image-button::before {
+}
+
+.image-button::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     transition: background 0.3s ease;
-  }
-  .image-button:hover::before {
-    background: rgba(0,0,0,0.3);
-  }
-  .image-button:hover img {
+}
+
+.image-button:hover::before {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.image-button:hover img {
     transform: scale(1.1);
-  }
-  /* Opcional: ajustar el alto fijo en XS, fluid en MD+ */
-  .thumb {
+}
+
+/* Opcional: ajustar el alto fijo en XS, fluid en MD+ */
+.thumb {
     height: 150px;
     object-fit: cover;
-  }
+}
 
 /*** Service ***/
 .service-item {
@@ -559,7 +586,7 @@ h6,
 }
 
 .project-item:hover .project-title,
-.project-carousel .owl-item.center .project-title  {
+.project-carousel .owl-item.center .project-title {
     bottom: -60px;
 }
 
@@ -651,6 +678,7 @@ h6,
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -658,6 +686,7 @@ h6,
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -754,7 +783,7 @@ h6,
     border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
-.btn-primary{
+.btn-primary {
     background: var(--primary);
     border: 1px solid var(--primary);
 }
