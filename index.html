@@ -275,11 +275,11 @@
     <!-- Carousel End -->
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-3 py-sm-5">
         <div class="container">
             <div class="row g-5 align-items-stretch">
                 <!-- GALERÍA (Desktop) -->
-                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn">
+                <div class="col-lg-6 order-2 order-lg-1 wow fadeIn" data-wow-delay="0.1s">
                     <div id="galleryContainer" class="tiled-gallery">
                         <!-- Left Column (50% ancho) -->
                         <div class="left-column">
@@ -314,7 +314,7 @@
                 </div>
 
                 <!-- TEXTO (derecha en desktop/tablet/mobile) -->
-                <div id="textContainer" class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.5s">
+                <div id="textContainer" class="col-lg-6 order-1 order-lg-2 wow fadeIn" data-wow-delay="0.3s">
                     <p class="fw-medium text-uppercase text-primary mb-2">Sobre Nosotros</p>
                     <h1 class="display-5 mb-4">Recolección, Almacenamiento y Reutilización</h1>
                     <p class="mb-4">
@@ -340,15 +340,24 @@
                     </div>
                     <div class="row pt-2">
                         <div class="col-sm-12">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-lg-square rounded-circle btn-primary">
-                                    <i class="fa fa-envelope-open text-white"></i>
+                            <a href="mailto:servicioalcliente@metalciplast.com" class="text-decoration-none text-reset">
+                                <div
+                                    class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start justify-content-center justify-content-sm-start text-center text-sm-start">
+                                    <!-- Icono -->
+                                    <div class="flex-shrink-0 btn-lg-square rounded-circle btn-primary mb-2 mb-sm-0">
+                                        <i class="fa fa-envelope-open text-white"></i>
+                                    </div>
+                                    <!-- Texto -->
+                                    <div class="ms-sm-3 w-100">
+                                        <p class="mb-0">Envíanos un correo</p>
+
+                                        <!-- Mostrar correo solo en pantallas sm en adelante -->
+                                        <h5 class="mb-0 d-none d-sm-block text-break">
+                                            servicioalcliente@metalciplast.com
+                                        </h5>
+                                    </div>
                                 </div>
-                                <div class="ms-3">
-                                    <p class="mb-0">Envíanos un correo</p>
-                                    <h5 class="mb-0">servicioalcliente@metalciplast.com</h5>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -357,16 +366,14 @@
     </div>
     <!-- About End -->
 
-
     <!-- Features Start -->
     <div id="features" class="container-xxl py-5 position-relative">
         <!-- Forma superior -->
         <div class="features-top-shape features-shape">
-            <svg viewBox="0 0 1000 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
-                style="display: block; width: 100%; height: 100%;">
+            <svg viewBox="0 0 1000 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="svg-wave">
                 <path
                     d="M0,0V46.29c47.31,22.51,104.43,35,162,35s114.69-12.5,172-35c57.3-22.49,114.42-35,172-35s114.69,12.51,172,35c57.3,22.49,114.42,35,172,35s114.69-12.5,172-35V0Z"
-                    fill="#fff"></path>l
+                    fill="#fff"></path>
             </svg>
         </div>
         <div class="container py-5">
@@ -720,7 +727,6 @@
     </div>
     <!-- Copyright End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
             class="bi bi-arrow-up"></i></a>
@@ -730,7 +736,6 @@
         class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-whatsapp" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
