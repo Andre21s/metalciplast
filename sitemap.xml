@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+                        https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 1. Página de Inicio -->
+  <url>
+    <loc>https://www.metalciplast.com/</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 2. Sobre Nosotros -->
+  <url>
+    <loc>https://www.metalciplast.com/sobre-nosotros.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 3. Servicios -->
+  <url>
+    <loc>https://www.metalciplast.com/servicios.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 4. Productos -->
+  <url>
+    <loc>https://www.metalciplast.com/productos.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 5. Contacto -->
+  <url>
+    <loc>https://www.metalciplast.com/contacto.html</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

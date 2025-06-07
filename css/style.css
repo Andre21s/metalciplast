@@ -6,6 +6,10 @@
     --dark: #1E2D2F;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -116,22 +120,12 @@ h6,
 
 .navbar .navbar-brand {
     position: relative;
-    padding-right: 50px;
+    padding-left: 3rem !important;
     height: 90px;
     display: flex;
     align-items: center;
+    padding: 0;
 }
-
-/* .navbar .navbar-brand::after {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 100%;
-    top: 0;
-    right: -25px;
-    transform: skewX(-30deg);
-    background-color: var(--primary);
-} */
 
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
@@ -156,7 +150,10 @@ h6,
     margin-left: 8px;
 }
 
+/*** Responsive: < 992px ***/
 @media (max-width: 991.98px) {
+
+    /* Menu links adjust */
     .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
@@ -164,11 +161,21 @@ h6,
 
     .navbar .navbar-nav {
         border-top: 1px solid #EEEEEE;
+        width: 100%;
+    }
+
+    /* Center the brand/logo */
+    .navbar .navbar-brand {
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
+/*** Desktop dropdown hover ***/
 @media (min-width: 992px) {
-
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -185,8 +192,36 @@ h6,
         transition: .5s;
         opacity: 1;
     }
+
+    .nav-icon-text {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .nav-icon-text i {
+        margin-top: 0;
+    }
 }
 
+/*** WhatsApp Floating (mobile) ***/
+.back-to-whatsapp {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 90px;
+    z-index: 99;
+}
+
+/* Mostrar ambos botones en pantallas < 992px */
+@media (max-width: 991.98px) {
+    .back-to-top {
+        display: inline-flex;
+    }
+
+    .back-to-whatsapp {
+        display: inline-flex;
+    }
+}
 
 /*** Header ***/
 .carousel-caption {
@@ -263,6 +298,92 @@ h6,
 }
 
 
+/* =====================================================
+   1) Contenedor principal de la galería (Flex de 2 columnas)
+   ===================================================== */
+.tiled-gallery {
+    display: flex;
+    width: 100%;
+    height: 0;
+    /* La altura se establecerá en el JS */
+    gap: 0.5rem;
+    /* Espacio horizontal entre columnas */
+    overflow: hidden;
+}
+
+.tiled-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+}
+
+/* =====================================================
+   2) Left Column (50% ancho), dividida en 2 filas:
+       - Fila superior (2fr)
+       - Fila inferior (1fr) con 2 columnas internas
+   ===================================================== */
+.tiled-gallery .left-column {
+    display: grid;
+    width: 50%;
+    grid-template-rows: 2fr 1fr;
+    gap: 0.5rem;
+    /* Separación vertical entre filas */
+    height: 100%;
+    min-height: 0;
+}
+
+.tiled-gallery .left-column .top-image {
+    grid-row: 1 / 2;
+}
+
+.tiled-gallery .left-column .bottom-row {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    /* Separación entre las dos columnas */
+    height: 100%;
+}
+
+/* =====================================================
+   3) Right Column (50% ancho), dividida en 3 filas iguales:
+       Aquí asignamos cada fila con una altura calculada:
+       La altura total (100%) menos los gaps (2 x 0.5rem = 1rem),
+       repartida en 3 celdas de igual tamaño.
+   ===================================================== */
+.tiled-gallery .right-column {
+    display: grid;
+    width: 50%;
+    height: 100%;
+    gap: 0.5rem;
+    /* Aplica tanto para filas como para columnas, en este caso filas */
+    /* Se definen 3 filas con la altura calculada */
+    grid-template-rows:
+        calc((100% - 1rem) / 3) calc((100% - 1rem) / 3) calc((100% - 1rem) / 3);
+    min-height: 0;
+}
+
+.tiled-gallery .right-column .item4,
+.tiled-gallery .right-column .item5,
+.tiled-gallery .right-column .item6 {
+    width: 100%;
+    height: 100%;
+}
+
+.right-column .item5 {
+    grid-row: 2 / 3;
+}
+
+
+@media (max-width: 450px) {
+    #galleryContainer {
+        height: calc(50% - 1rem);
+        /* Reduce el alto a la mitad */
+    }
+}
+
 /*** Features ***/
 #features {
     background-image: url("../img/bg-section-somos.svg");
@@ -272,9 +393,88 @@ h6,
     background-attachment: fixed;
 }
 
+/* Estilos para los recortes superiores e inferiores */
+.features-top-shape,
+.features-bottom-shape,
+.features-bottom-shape-service {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+
+
+.features-top-shape {
+    top: 0;
+}
+
+.features-bottom-shape {
+    bottom: 0;
+    transform: rotate(180deg);
+}
+
+.features-bottom-shape-service {
+    transform: rotate(180deg);
+}
+
+/* Esto asegura que los SVG estén encima del fondo pero detrás del contenido */
+.features-shape svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .features-content span,
 .feature-title {
     color: var(--light);
+}
+
+/* Ajustes generales */
+.section-full {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 15px;
+    color: #333;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.content p,
+.content li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.content ul {
+    padding-left: 1.25rem;
+}
+
+/* Gradientes suaves para cada sección */
+.bg-compra {
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+}
+
+.bg-reparacion {
+    background: linear-gradient(135deg, #fce4ec 0%, #ffffff 100%);
+}
+
+.bg-almacenamiento {
+    background: linear-gradient(135deg, #ede7f6 0%, #ffffff 100%);
+}
+
+#carouselCompra .carousel-inner .carousel-item img,
+#carouselReconformacion .carousel-inner .carousel-item img,
+#carouselAlmacenamiento .carousel-inner .carousel-item img,
+#carouselDestruccion .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
 }
 
 .btn-play {
@@ -380,6 +580,31 @@ h6,
     opacity: 1;
 }
 
+/* ======================
+ESTILOS PARA LOS PRODUCTOS DE FEATURES
+====================== */
+
+.product-card {
+    border: none;
+    border-radius: 1rem;
+    transition: transform .3s, box-shadow .3s;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.product-card img {
+    height: 180px;
+    object-fit: contain;
+}
+
+/* ======================
+ESTILOS PARA EL CAROUSEL LOGISTICA
+====================== */
+
 #logisticaCarousel .carousel-inner {
     height: auto;
     background-color: #f5f5f5 !important;
@@ -399,17 +624,10 @@ h6,
     position: relative;
     overflow: hidden;
     cursor: pointer;
-
-    /* ---- FIJAMOS ancho y alto idénticos ---- */
     width: 150px;
     height: 150px;
-
-    /* ---- Borde para distinguirlas ---- */
     border: 2px solid var(--primary);
     border-radius: 4px;
-
-    /* opcional: margen interno si quieres espacio entre borde y la img */
-    /* padding: 2px; */
 }
 
 .image-button img {
@@ -435,7 +653,6 @@ h6,
     transform: scale(1.1);
 }
 
-/* Opcional: ajustar el alto fijo en XS, fluid en MD+ */
 .thumb {
     height: 150px;
     object-fit: cover;
@@ -635,119 +852,6 @@ h6,
     transition: .5s;
 }
 
-
-/*** Team ***/
-.team-item .team-social {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    display: flex;
-    align-items: center;
-    background: var(--primary);
-    transition: .5s;
-}
-
-.team-item:hover .team-social {
-    left: 0;
-}
-
-
-/*** Testimonial ***/
-.testimonial-carousel::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.testimonial-carousel::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-@media (min-width: 768px) {
-
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 200px;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .testimonial-carousel::before,
-    .testimonial-carousel::after {
-        width: 300px;
-    }
-}
-
-.testimonial-carousel .owl-nav {
-    position: absolute;
-    width: 350px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0;
-    transition: .5s;
-    z-index: 1;
-}
-
-.testimonial-carousel:hover .owl-nav {
-    width: 300px;
-    opacity: 1;
-}
-
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
-    position: relative;
-    color: var(--primary);
-    font-size: 45px;
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
-    color: var(--dark);
-}
-
-.testimonial-carousel .testimonial-img img {
-    width: 100px;
-    height: 100px;
-}
-
-.testimonial-carousel .testimonial-img .btn-square {
-    position: absolute;
-    bottom: -19px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.testimonial-carousel .owl-item .testimonial-text {
-    margin-bottom: 30px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transform: scale(.8);
-    transition: .5s;
-}
-
-.testimonial-carousel .owl-item.center .testimonial-text {
-    transform: scale(1);
-}
-
-
 /*** Footer ***/
 .footer {
     color: #B0B9AE;
@@ -776,6 +880,13 @@ h6,
     color: var(--light);
     letter-spacing: 1px;
     box-shadow: none;
+}
+
+/* Para pantallas móviles (<= 767px) */
+@media (max-width: 767px) {
+    #frame-map {
+        height: 250px !important;
+    }
 }
 
 .copyright {

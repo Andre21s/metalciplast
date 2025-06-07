@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -24,8 +24,8 @@
             $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -35,23 +35,25 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 750, 'easeInOutExpo');
         return false;
     });
 
 
     // Modal Video
-    var $videoSrc;
+    let $videoSrc;
+
     $('.btn-play').click(function () {
         $videoSrc = $(this).data("src");
     });
-    console.log($videoSrc);
+
     $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    })
+        $("#video").attr('src', $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
+    });
+
     $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    })
+        $("#video").attr('src', '');
+    });
 
 
     // Facts counter
@@ -69,52 +71,50 @@
         center: true,
         dots: false,
         nav: true,
-        navText : [
+        navText: [
             '<i class="bi bi-chevron-left"></i>',
             '<i class="bi bi-chevron-right"></i>'
         ],
         responsive: {
-            0:{
-                items:2
+            0: {
+                items: 2
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             },
-            992:{
-                items:4
+            992: {
+                items: 4
             },
-            1200:{
-                items:5
+            1200: {
+                items: 5
             }
         }
     });
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: false,
-        loop: true,
-        nav : true,
-        navText : [
-            '<i class="bi bi-arrow-left"></i>',
-            '<i class="bi bi-arrow-right"></i>'
-        ],
-        responsive: {
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            }
-        }
-    });
+    function ajustarAlturaGaleria() {
+        const galeria = document.getElementById("galleryContainer");
+        const texto = document.getElementById("textContainer");
 
-    
+        // Verifica que ambos elementos existan
+        if (!galeria || !texto) return;
+
+        let altoTexto = texto.offsetHeight;
+
+        // Si el ancho de la pantalla es menor a 450px, reduce el alto a la mitad
+        if (window.innerWidth <= 450) {
+            altoTexto = altoTexto / 2;
+        }
+
+        galeria.style.height = altoTexto + "px";
+    }
+
+    window.addEventListener("load", ajustarAlturaGaleria);
+    window.addEventListener("resize", ajustarAlturaGaleria);
+
+
 })(jQuery);
 

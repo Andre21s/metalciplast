@@ -25,6 +25,11 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => AOS.init());
+    </script>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,28 +46,52 @@
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5 ">
-        <a href="index.html" class="navbar-brand ps-5 me-0">
-            <!-- <h1 class="text-white m-0">Metalciplast</h1> -->
-            <img id="logo" src="img/logo.jpg" alt="Logo" width="200" height="90" class="d-inline-block align-text-top">
+    <!-- NavBar Main -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-3">
+        <a href="index.html" class="navbar-brand">
+            <img id="logo" src="img/logo.jpg" alt="Logo" width="200" height="90"
+                class="d-inline-block align-text-top" />
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Inicio</a>
-                <a href="about.html" class="nav-item nav-link">Somos</a>
-                <a href="service.html" class="nav-item nav-link">Servicios</a>
-                <a href="feature.html" class="nav-link nav-link active">Productos</a>
-                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a href="index.html" class="nav-item nav-link d-lg-flex flex-lg-column align-items-lg-center">
+                    <!-- Icono de Casa (solo visible en mobile) -->
+                    <i class="bi bi-house-door-fill d-inline-block me-2 align-middle text-center"></i>
+                    Inicio
+                </a>
+                <a href="sobre-nosotros.html" class="nav-item nav-link d-lg-flex flex-lg-column align-items-lg-center">
+                    <!-- Icono de Persona o Info (solo en mobile) -->
+                    <i class="bi bi-people-fill d-inline-block me-2 align-middle text-center"></i>
+                    Somos
+                </a>
+                <a href="servicios.html" class="nav-item nav-link d-lg-flex flex-lg-column align-items-lg-center">
+                    <!-- Icono de Estrella (servicios) -->
+                    <i class="bi bi-gear-fill d-inline-block me-2 align-middle text-center"></i>
+                    Servicios
+                </a>
+                <a href="productos.html"
+                    class="nav-item nav-link d-lg-flex flex-lg-column align-items-lg-center active">
+                    <!-- Icono de Caja (productos) -->
+                    <i class="bi bi-box-seam d-inline-block me-2 align-middle text-center"></i>
+                    Productos
+                </a>
+                <a href="contacto.html" class="nav-item nav-link d-lg-flex flex-lg-column align-items-lg-center">
+                    <!-- Icono de Sobre (contacto) -->
+                    <i class="bi bi-envelope-fill d-inline-block me-2 align-middle text-center"></i>
+                    Contacto
+                </a>
             </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Solicitar informacion</a>
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/593991551241?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios"
+                class="btn btn-primary fs-5 px-4 py-2 d-none d-lg-inline-flex align-items-center gap-2" target="_blank">
+                Asesoría <i class="bi bi-whatsapp ms-2 fs-4"></i>
+            </a>
         </div>
     </nav>
-    <!-- Navbar End -->
+    <!-- NavBar End -->
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
@@ -235,6 +264,84 @@
     </div>
     <!-- Features End -->
 
+    <!-- SECCIÓN PRODUCTOS -->
+    <section id="productos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h2 class="fw-bold">Nuestros Productos</h2>
+                <p class="text-muted">Soluciones de envases reacondicionados y nuevos, 100% sostenibles.</p>
+            </div>
+            <div class="row g-4">
+
+                <!-- Producto 1: IBC 1000 L -->
+                <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card h-100">
+                        <img src="img/tanqueIBC.jpeg" class="card-img-top" alt="IBC 1000 litros">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">IBC de 1000 L</h5>
+                            <p class="card-text flex-grow-1">
+                                Contenedor cúbico de 1000-1200L, ideal para transportar líquidos a granel con válvula
+                                de vaciado.
+                            </p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Polietileno HD + acero
+                                    galvanizado</li>
+                                <li><i class="bi bi-arrows-expand text-success me-2"></i>Diseño apilable, base para
+                                    montacargas</li>
+                                <li><i class="bi bi-speedometer2 text-success me-2"></i>Optimiza espacio vs tambores
+                                </li>
+                            </ul>
+                            <small class="text-muted">Usos: Químicos, alimentos, farmacéuticos, agrícolas…</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2: Tambor Metálico -->
+                <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card h-100">
+                        <img src="img/tambor_metalico.jpg" class="card-img-top" alt="Tambor Metálico">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">Tambor Metálico</h5>
+                            <p class="card-text flex-grow-1">
+                                Contenedor cilíndrico en acero o plástico, con lomos de refuerzo, para líquidos o polvos
+                                a granel.
+                            </p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Tipos: tapa abierta y tapa
+                                    fija</li>
+                                <li><i class="bi bi-shield-fill-check text-success me-2"></i>Certificados para
+                                    peligrosos</li>
+                            </ul>
+                            <small class="text-muted">Usos: Químicos, detergentes, aceites, farmacéuticos,
+                                agroindustriales.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3: Tambor Plástico 220 L -->
+                <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card h-100">
+                        <img src="img/tambor-plastico-3.jpeg" class="card-img-top" alt="Tambor Plástico">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-primary">Tambor Plástico 220 L</h5>
+                            <p class="card-text flex-grow-1">
+                                Recipiente ligero y resistente, ideal para líquidos y polvos. Capacidad estándar de
+                                220 L.
+                            </p>
+                            <ul class="list-unstyled mb-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Resistente a la corrosión
+                                </li>
+                                <li><i class="bi bi-droplet-fill text-success me-2"></i>Compatible con químicos y
+                                    alimentos</li>
+                            </ul>
+                            <small class="text-muted">Usos: Industria, agricultura, limpieza y doméstico.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Video Modal Start -->
     <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -256,35 +363,38 @@
     </div>
     <!-- Video Modal End -->
 
-
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <div class="container-fluid bg-dark footer py-5 wow fadeIn position-relative" data-wow-delay="0.1s">
+        <!-- Forma superior (curva SVG) -->
+        <div class="features-top-shape features-shape">
+            <svg viewBox="0 0 1000 40" preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.31,22.51,104.43,35,162,35s114.69-12.5,172-35c57.3-22.49,114.42-35,172-35s114.69,12.51,172,35c57.3,22.49,114.42-35,172,35s114.69-12.5,172-35V0Z"
+                    fill="#fff"></path>
+            </svg>
+        </div>
+
+        <div class="container pt-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <!-- Columna 1: Oficina y Noticias -->
+                <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Oficina</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Via Daule Km 27</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+593 (en construccion)</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>gestor.metalciplast@gmail</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Guayaquil Via Daule Km 27</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+593 99 155 1241</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>servicioalcliente@metalciplast.com</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
+
+                <!-- Columna 2: Enlaces -->
+                <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-4">Enlaces</h5>
-                    <a class="btn btn-link" href="">Inicio</a>
-                    <a class="btn btn-link" href="">Sobre Nosotros</a>
-                    <a class="btn btn-link" href="">Servicios</a>
-                    <a class="btn btn-link" href="">Productos</a>
-                    <a class="btn btn-link" href="">Contactanos</a>
+                    <a class="btn btn-link" href="https://www.metalciplast.com">Inicio</a>
+                    <a class="btn btn-link" href="sobre-nosotros.html">Sobre Nosotros</a>
+                    <a class="btn btn-link" href="servicios.html">Servicios</a>
+                    <a class="btn btn-link" href="productos.html">Productos</a>
+                    <a class="btn btn-link" href="contacto.html">Contactanos</a>
                 </div>
+
+                <!-- Columna 3: Horarios de Atención -->
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Horarios de Atencion</h5>
                     <p class="mb-1">Lunes - Viernes</p>
@@ -294,14 +404,16 @@
                     <p class="mb-1">Domingo</p>
                     <h6 class="text-light">Cerrado</h6>
                 </div>
+
+                <!-- Columna 4: Ubicación con mapa incrustado -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Noticias</h5>
-                    <p>Recibe las ultimas novedades</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Tu correo">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Suscribirse</button>
+                    <h5 class="text-white mb-4">Ubicacion</h5>
+                    <div class="rounded overflow-hidden">
+                        <iframe id="frame-map" class="w-100"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31899.413769904048!2d-80.03012118916016!3d-1.9839327999999874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d0d9f06105e07%3A0x2d28c1a8a0c197dc!2sMetalciplast%20SA!5e0!3m2!1ses-419!2sec!4v1747196823425!5m2!1ses-419!2sec"
+                            referrerpolicy="no-referrer-when-downgrade" frameborder="0" style="height: 150px; border:0;"
+                            allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
                     </div>
                 </div>
             </div>
