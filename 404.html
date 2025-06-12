@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Industro - Industrial HTML Template</title>
+    <title>Pagina no encontrada - Error 404</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -14,6 +14,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Rubik:wght@500&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
         rel="stylesheet">
@@ -37,144 +39,169 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="spinner-border text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-white">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
-                    <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+012 345 6789</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="index.html" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">Industro</h1>
+    <!-- NavBar optimizada -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-3" role="navigation"
+        aria-label="Barra de navegación principal">
+        <a href="https://www.metalciplast.com" class="navbar-brand">
+            <img id="logo" src="img/logo.webp" alt="Logo de Metalciplast" width="200" height="90"
+                class="d-inline-block align-text-top" />
         </a>
-        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-label="Abrir menú de navegación">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="project.html" class="dropdown-item">Projects</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
+            <ul class="navbar-nav ms-auto p-4 p-lg-0">
+                <li class="nav-item">
+                    <a href="https://www.metalciplast.com"
+                        class="nav-link d-lg-flex flex-lg-column align-items-lg-center active"
+                        aria-label="Ir a la página de inicio">
+                        <i class="bi bi-house-door-fill d-inline-block me-2 align-middle text-center"
+                            aria-hidden="true"></i>
+                        Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.metalciplast.com/nosotros/"
+                        class="nav-link d-lg-flex flex-lg-column align-items-lg-center"
+                        aria-label="Ir a la página Sobre Nosotros">
+                        <i class="bi bi-people-fill d-inline-block me-2 align-middle text-center"
+                            aria-hidden="true"></i>
+                        Somos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.metalciplast.com/servicios/"
+                        class="nav-link d-lg-flex flex-lg-column align-items-lg-center"
+                        aria-label="Ir a la página de Servicios">
+                        <i class="bi bi-gear-fill d-inline-block me-2 align-middle text-center" aria-hidden="true"></i>
+                        Servicios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.metalciplast.com/productos/"
+                        class="nav-link d-lg-flex flex-lg-column align-items-lg-center"
+                        aria-label="Ir a la página de Productos">
+                        <i class="bi bi-box-seam d-inline-block me-2 align-middle text-center" aria-hidden="true"></i>
+                        Productos
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.metalciplast.com/contacto/"
+                        class="nav-link d-lg-flex flex-lg-column align-items-lg-center"
+                        aria-label="Ir a la página de Contacto">
+                        <i class="bi bi-envelope-fill d-inline-block me-2 align-middle text-center"
+                            aria-hidden="true"></i>
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/593991551241?text=Hola%2C%20deseo%20más%20información%20sobre%20sus%20servicios"
+                class="btn btn-primary fs-5 px-4 py-2 d-none d-lg-inline-flex align-items-center gap-2" target="_blank"
+                aria-label="Abrir chat de WhatsApp para solicitar asesoría" role="button">
+                <span>Asesoría</span>
+                <i class="bi bi-whatsapp ms-2 fs-4" aria-hidden="true"></i>
+            </a>
         </div>
     </nav>
-    <!-- Navbar End -->
-
+    <!-- NavBar End -->
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.2s">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">404 Error</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item">
+                        <a href="https://www.metalciplast.com" aria-label="Ir a la página de inicio">Inicio</a>
+                    </li>
+                    <li class="breadcrumb-item"><a>Paginas</a></li>
                     <li class="breadcrumb-item active" aria-current="page">404 Error</li>
                 </ol>
             </nav>
         </div>
     </div>
-    <!-- Page Header End -->
 
-
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- Página 404 optimizada -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.2s">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
+                    <i class="bi bi-exclamation-triangle display-1 text-primary" aria-hidden="true"></i>
                     <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
-                        our home page or try to use a search?</p>
-                    <a class="btn btn-primary py-3 px-5" href="">Go Back To Home</a>
+                    <h1 class="mb-4">Página No Encontrada</h1>
+                    <p class="mb-4">Lo sentimos, la página que buscas no existe en nuestro sitio web. Puedes regresar a
+                        la página de inicio o intentar buscar.</p>
+                    <a class="btn btn-primary py-3 px-5" href="https://www.metalciplast.com"
+                        aria-label="Volver a la página de inicio">
+                        <span>Regresar a Inicio</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 404 End -->
-
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
+    <div class="container-fluid bg-dark footer py-5 wow fadeIn position-relative" data-wow-delay="0.2s">
+        <!-- Forma superior (curva SVG) -->
+        <div class="features-top-shape features-shape">
+            <svg viewBox="0 0 1000 40" preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.31,22.51,104.43,35,162,35s114.69-12.5,172-35c57.3-22.49,114.42-35,172-35s114.69,12.51,172,35c57.3,22.49,114.42-35,172,35s114.69-12.5,172-35V0Z"
+                    fill="#fff"></path>
+            </svg>
+        </div>
+
+        <div class="container pt-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <!-- Columna 1: Oficina y Noticias -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Oficina</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Guayaquil Via Daule Km 27</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+593 99 155 1241</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>servicioalcliente@metalciplast.com</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+
+                <!-- Columna 2: Enlaces  -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-4">Enlaces</h5>
+                    <a class="btn btn-link" href="https://www.metalciplast.com"
+                        aria-label="Ir a la página de inicio">Inicio</a>
+                    <a class="btn btn-link" href="https://www.metalciplast.com/nosotros/"
+                        aria-label="Ir a la página Sobre Nosotros">Sobre Nosotros</a>
+                    <a class="btn btn-link" href="https://www.metalciplast.com/servicios/"
+                        aria-label="Ir a la página de Servicios">Servicios</a>
+                    <a class="btn btn-link" href="https://www.metalciplast.com/productos/"
+                        aria-label="Ir a la página de Productos">Productos</a>
+                    <a class="btn btn-link" href="https://www.metalciplast.com/contacto/"
+                        aria-label="Ir a la página de Contacto">Contáctanos</a>
                 </div>
+
+                <!-- Columna 3: Horarios de Atención -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Business Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
+                    <h5 class="text-white mb-4">Horarios de Atencion</h5>
+                    <p class="mb-1">Lunes - Viernes</p>
+                    <h6 class="text-light">08:30 am - 05:00 pm</h6>
+                    <p class="mb-1">Sabado</p>
+                    <h6 class="text-light">08:30 am - 05:00 pm</h6>
+                    <p class="mb-1">Domingo</p>
+                    <h6 class="text-light">Cerrado</h6>
                 </div>
+
+                <!-- Columna 4: Ubicación con mapa incrustado -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    <h5 class="text-white mb-4">Ubicación</h5>
+                    <div class="rounded overflow-hidden">
+                        <iframe id="frame-map" class="w-100" loading="lazy"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31899.413769904048!2d-80.03012118916016!3d-1.9839327999999874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d0d9f06105e07%3A0x2d28c1a8a0c197dc!2sMetalciplast%20SA!5e0!3m2!1ses-419!2sec!4v1747196823425!5m2!1ses-419!2sec"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" aria-hidden="false"
+                            tabindex="0">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -182,24 +209,38 @@
     </div>
     <!-- Footer End -->
 
-
-    <!-- Copyright Start -->
+    <!-- Copyright -->
     <div class="container-fluid copyright bg-dark py-4">
         <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
+            <p class="mb-2">
+                Copyright &copy;
+                <a class="fw-semi-bold text-copyright" href="https://www.metalciplast.com"
+                    aria-label="Ir a la página principal de Metalciplast">
+                    Metalciplast
+                </a>, Todos los derechos reservados.
             </p>
-            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed
-                By: <a href="https://themewagon.com">ThemeWagon</a> </p>
+            <p class="mb-0">
+                Diseñado por
+                <a class="fw-semi-bold text-designed" href="https://www.metalciplast.com"
+                    aria-label="Ir a la página principal de Metalciplast">
+                    Metalciplast
+                </a> 2025-2026
+            </p>
         </div>
     </div>
-    <!-- Copyright End -->
 
+    <!-- Botón de regresar arriba -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+        aria-label="Regresar al inicio de la página">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </a>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/593991551241?text=Hola%2C%20deseo%20más%20información"
+        class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-whatsapp" target="_blank"
+        aria-label="Abrir chat de WhatsApp para solicitar asesoría">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

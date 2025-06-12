@@ -42,10 +42,16 @@ h6,
     font-weight: 500 !important;
 }
 
+h3, .h3{
+    font-size: calc(1.1rem + .6vw) !important;
+}
+
 
 /*** Spinner ***/
 #spinner {
     opacity: 0;
+    width: 3rem;
+    height: 3rem;
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
@@ -273,7 +279,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/bg-about.jpg) center center no-repeat;
+    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/bg-about.webp) center center no-repeat;
     background-size: cover;
 }
 
@@ -289,7 +295,7 @@ h6,
 
 /*** About ***/
 #about-left {
-    background-image: url("../img/bg-somos3.jpg");
+    background-image: url("../img/bg-somos3.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -305,8 +311,6 @@ h6,
 .facts .border {
     border-color: rgba(255, 255, 255, .1) !important;
 }
-
-
 
 /* =====================================================
    1) Contenedor principal de la galería (Flex de 2 columnas)
@@ -403,6 +407,11 @@ h6,
     background-attachment: fixed;
 }
 
+#videoPlayButton {
+    width: 120px;
+    height: 120px;
+}
+
 /* Estilos para los recortes superiores e inferiores */
 .features-top-shape,
 .features-bottom-shape,
@@ -415,11 +424,11 @@ h6,
 
 
 .features-top-shape {
-    top: 0;
+    top: -3px !important;
 }
 
 .features-bottom-shape {
-    bottom: 0;
+    bottom: -3px !important;
     transform: rotate(180deg);
 }
 
@@ -452,6 +461,7 @@ h6,
 @media (min-width: 1200px) {
     .svg-wave {
         height: 70px;
+
         /* Ligeramente menor en pantallas grandes */
     }
 }
@@ -690,7 +700,31 @@ ESTILOS PARA EL CAROUSEL LOGISTICA
     object-fit: cover;
 }
 
+/*** Mision y Vision ***/
+.mision-vision-bg {
+    background-image: url('../img/mision.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.vision-bg {
+    background-image: url('../img/vision.webp');
+}
+
+.shadown-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mision-vision-color {
+    color: #ff7637
+}
+
 /*** Service ***/
+#service-section .title-service {
+    max-width: 600px;
+}
+
 .service-item {
     position: relative;
     margin: 65px 0 25px 0;
@@ -774,6 +808,10 @@ ESTILOS PARA EL CAROUSEL LOGISTICA
 
 .service-item:hover .service-text::before {
     top: -55px;
+}
+
+.service-text{
+    font-size: 0.9rem ;
 }
 
 .service-item .btn {
@@ -884,6 +922,25 @@ ESTILOS PARA EL CAROUSEL LOGISTICA
     transition: .5s;
 }
 
+/*** Contacto ***/
+.btn-contact {
+    width: 90px;
+    height: 90px;
+}
+
+.map-contact {
+    min-height: 450px;
+    border: 0;
+}
+
+.form-control{
+    height: 150px;
+}
+
+.text-message {
+    height: 150px !important;
+}
+
 /*** Footer ***/
 .footer {
     color: #B0B9AE;
@@ -914,6 +971,11 @@ ESTILOS PARA EL CAROUSEL LOGISTICA
     box-shadow: none;
 }
 
+#frame-map {
+    height: 150px;
+    border: 0;
+}
+
 /* Para pantallas móviles (<= 767px) */
 @media (max-width: 767px) {
     #frame-map {
@@ -924,6 +986,11 @@ ESTILOS PARA EL CAROUSEL LOGISTICA
 .copyright {
     color: #B0B9AE;
     border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.text-copyright,
+.text-designed {
+    color: var(--primary);
 }
 
 .btn-primary {
