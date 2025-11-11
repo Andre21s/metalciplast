@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#page-content {
+    transition: opacity 0.5s ease;
+}
+
 .back-to-top {
     position: fixed;
     display: none;
@@ -156,8 +160,83 @@ h3, .h3{
     margin-left: 8px;
 }
 
-/*** Responsive: < 992px ***/
-@media (max-width: 991.98px) {
+/*** Navbar ***/
+.navbar.sticky-top {
+    top: -100px;
+    transition: .5s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    position: relative;
+    padding-left: 3rem !important;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 20px 0;
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 500;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* =====================================================================
+  SOBREESCRITURA DE PUNTO DE QUIEBRE (Breakpoint Override)
+  Aquí forzamos el breakpoint 'lg' (992px) a esperar hasta 1050px.
+=====================================================================
+*/
+
+/* 
+  En el rango entre 992px (breakpoint original de 'lg') y 1049.98px 
+  (nuestro nuevo breakpoint), forzamos a que el menú se MANTENGA COLAPSADO.
+*/
+@media (min-width: 992px) and (max-width: 1049.98px) {
+    
+    /* Oculta el menú colapsable (anula el 'display: flex' de Bootstrap) */
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+    }
+
+    /* Muestra el botón de hamburguesa */
+    .navbar-expand-lg .navbar-toggler {
+        display: block !important;
+    }
+
+    /* Oculta elementos de escritorio (botón WhatsApp) que usan 'd-lg-inline-flex' */
+    .navbar-expand-lg .d-lg-inline-flex {
+        display: none !important;
+    }
+    
+    /* Fuerza a los enlaces del menú (que usan 'd-lg-flex') a comportarse 
+       como en móvil (display: block)
+    */
+    .navbar-expand-lg .navbar-nav .nav-link.d-lg-flex {
+        display: block !important;
+    }
+}
+
+
+/* 2. REGLAS PARA MÓVIL (COLAPSADO)*/
+@media (max-width: 1049.98px) { /* ANTES: 991.98px */
 
     /* Menu links adjust */
     .navbar .navbar-nav .nav-link {
@@ -180,8 +259,12 @@ h3, .h3{
     }
 }
 
-/*** Desktop dropdown hover ***/
-@media (min-width: 992px) {
+/* 3. REGLAS PARA DESKTOP (EXPANDIDO):
+  media query original de 992px a 1050px.
+  todos los estilos de escritorio se aplicarán desde 1050px.
+*/
+@media (min-width: 1050px) { /* ANTES: 992px */
+
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;
@@ -207,6 +290,20 @@ h3, .h3{
     .nav-icon-text i {
         margin-top: 0;
     }
+    
+    /* Restauramos los estilos de escritorio que se 
+       anularon en el media query de móvil 
+    */
+    .navbar .navbar-nav .nav-link {
+        margin-right: 35px;
+        padding: 20px 0;
+    }
+    .navbar .navbar-brand {
+         left: auto;
+         right: auto;
+         margin: 0;
+         padding-left: 3rem !important;
+     }
 }
 
 /*** WhatsApp Floating (mobile) ***/

@@ -7,9 +7,14 @@
             if ($('#spinner').length > 0) {
                 $('#spinner').removeClass('show');
             }
-        }, 1);
+            // Muestra el contenido de la página con un "fade-in".
+            $('#page-content').css({ 'opacity': 1, 'visibility': 'visible' });
+        }, 500);
     };
-    spinner();
+    
+    $(window).on('load', function() {
+        spinner(); // Llama a tu función SÓLO cuando todo ha cargado.
+    });
 
 
     // Initiate the wowjs
