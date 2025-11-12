@@ -1,25 +1,25 @@
 /********** Template CSS **********/
 :root {
-    --primary: #16a333;
-    --secondary: #4D774E;
-    --light: #F1F7ED;
-    --dark: #1E2D2F;
+  --primary: #16a333;
+  --secondary: #4d774e;
+  --light: #f1f7ed;
+  --dark: #1e2d2f;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #page-content {
-    transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 30px;
+  z-index: 99;
 }
 
 h1,
@@ -27,7 +27,7 @@ h2,
 .h1,
 .h2,
 .fw-bold {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 
 h3,
@@ -35,7 +35,7 @@ h4,
 .h3,
 .h4,
 .fw-medium {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
 
 h5,
@@ -43,160 +43,158 @@ h6,
 .h5,
 .h6,
 .fw-semi-bold {
-    font-weight: 500 !important;
+  font-weight: 500 !important;
 }
 
-h3, .h3{
-    font-size: calc(1.1rem + .6vw) !important;
+h3,
+.h3 {
+  font-size: calc(1.1rem + 0.6vw) !important;
 }
-
 
 /*** Spinner ***/
 #spinner {
-    opacity: 0;
-    width: 3rem;
-    height: 3rem;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+  opacity: 0;
+  width: 3rem;
+  height: 3rem;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
 }
 
 #spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
 }
-
 
 /*** Button ***/
 .btn {
-    transition: .5s;
-    font-weight: 500;
+  transition: 0.5s;
+  font-weight: 500;
 }
 
 .btn-primary,
 .btn-outline-primary:hover {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .btn-square {
-    width: 38px;
-    height: 38px;
+  width: 38px;
+  height: 38px;
 }
 
 .btn-sm-square {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
 }
 
 .btn-lg-square {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
 
 .btn-square,
 .btn-sm-square,
 .btn-lg-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
-
 .topbar-right {
-    position: relative;
-    background: var(--primary);
+  position: relative;
+  background: var(--primary);
 }
 
 .topbar-right::before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 100%;
-    top: 0;
-    left: -15px;
-    transform: skewX(-30deg);
-    background-color: var(--primary);
-}
-
-
-/*** Navbar ***/
-.navbar.sticky-top {
-    top: -100px;
-    transition: .5s;
-}
-
-.navbar .navbar-brand {
-    position: relative;
-    padding-left: 3rem !important;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    padding: 0;
-}
-
-.navbar .navbar-nav .nav-link {
-    margin-right: 35px;
-    padding: 20px 0;
-    color: var(--dark);
-    font-size: 18px;
-    font-weight: 500;
-    outline: none;
-}
-
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
-}
-
-.navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 100%;
+  top: 0;
+  left: -15px;
+  transform: skewX(-30deg);
+  background-color: var(--primary);
 }
 
 /*** Navbar ***/
 .navbar.sticky-top {
-    top: -100px;
-    transition: .5s;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  top: -100px;
+  transition: 0.5s;
 }
 
 .navbar .navbar-brand {
-    position: relative;
-    padding-left: 3rem !important;
-    height: 90px;
-    display: flex;
-    align-items: center;
-    padding: 0;
+  position: relative;
+  padding-left: 3rem !important;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0;
 }
 
 .navbar .navbar-nav .nav-link {
-    margin-right: 35px;
-    padding: 20px 0;
-    color: var(--dark);
-    font-size: 18px;
-    font-weight: 500;
-    outline: none;
+  margin-right: 35px;
+  padding: 20px 0;
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 .navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/*** Navbar ***/
+.navbar.sticky-top {
+  top: -100px;
+  transition: 0.5s;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+  position: relative;
+  padding-left: 3rem !important;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-right: 35px;
+  padding: 20px 0;
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: var(--primary);
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 /* =====================================================================
@@ -210,46 +208,945 @@ h3, .h3{
   (nuestro nuevo breakpoint), forzamos a que el menú se MANTENGA COLAPSADO.
 */
 @media (min-width: 992px) and (max-width: 1049.98px) {
-    
-    /* Oculta el menú colapsable (anula el 'display: flex' de Bootstrap) */
-    .navbar-expand-lg .navbar-collapse {
-        display: none !important;
+  /* Muestra el botón de hamburguesa (anula el 'display: none' de .navbar-expand-lg) */
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+
+  /* Oculta el menú por defecto (anula el 'display: flex !important' de Bootstrap)
+      Esto es lo que permite que el JavaScript funcione.
+    */
+  .navbar-expand-lg .navbar-collapse {
+    display: none !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show {
+    display: block !important;
+  }
+
+  /* Oculta el botón de WhatsApp de escritorio (anula d-lg-inline-flex) */
+  .navbar .d-none.d-lg-inline-flex {
+    display: none !important;
+  }
+
+  /* Hace que los enlaces del menú se comporten como móvil (anula d-lg-flex)
+      y se apilen verticalmente.
+    */
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link.d-lg-flex {
+    display: block !important;
+    /* Aplicamos los estilos de padding de móvil aquí también */
+    padding: 10px 0;
+    margin-right: 0;
+  }
+}
+
+/* 2. REGLAS PARA MÓVIL (COLAPSADO)*/
+@media (max-width: 1049.98px) {
+  /* ANTES: 991.98px */
+
+  /* Menu links adjust */
+  .navbar .navbar-nav .nav-link {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  .navbar .navbar-nav {
+    border-top: 1px solid #eeeeee;
+    width: 100%;
+  }
+
+  /* Center the brand/logo */
+  .navbar .navbar-brand {
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* 3. REGLAS PARA DESKTOP (EXPANDIDO):
+  media query original de 992px a 1050px.
+  todos los estilos de escritorio se aplicarán desde 1050px.
+*/
+@media (min-width: 1050px) {
+  /* ANTES: 992px */
+
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    border: none;
+    margin-top: 0;
+    top: 150%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  .navbar .nav-item:hover .dropdown-menu {
+    top: 100%;
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+
+  .nav-icon-text {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .nav-icon-text i {
+    margin-top: 0;
+  }
+
+  /* Restauramos los estilos de escritorio que se 
+       anularon en el media query de móvil 
+    */
+  .navbar .navbar-nav .nav-link {
+    margin-right: 35px;
+    padding: 20px 0;
+  }
+  .navbar .navbar-brand {
+    left: auto;
+    right: auto;
+    margin: 0;
+    padding-left: 3rem !important;
+  }
+}
+
+/*** WhatsApp Floating (mobile) ***/
+.back-to-whatsapp {
+  position: fixed;
+  display: none;
+  right: 30px;
+  bottom: 90px;
+  z-index: 99;
+}
+
+/* Mostrar ambos botones en pantallas < 992px */
+@media (max-width: 991.98px) {
+  .back-to-top {
+    display: inline-flex;
+  }
+
+  .back-to-whatsapp {
+    display: inline-flex;
+  }
+}
+
+/* Ajustes solo en móviles (pantallas menores a 576px) */
+@media (max-width: 575.98px) {
+  .back-to-top,
+  .back-to-whatsapp {
+    right: 15px;
+  }
+}
+
+/*** Header ***/
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(2, 36, 91, 1) 0%,
+    rgba(2, 36, 91, 0) 100%
+  );
+  z-index: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 15%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--primary);
+  border: 15px solid var(--primary);
+  border-radius: 3.5rem;
+}
+
+@media (max-width: 768px) {
+  #header-carousel .carousel-item {
+    position: relative;
+    min-height: 450px;
+  }
+
+  #header-carousel .carousel-item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.page-header {
+  background: linear-gradient(
+      to right,
+      rgba(2, 36, 91, 1) 0%,
+      rgba(2, 36, 91, 0) 100%
+    ),
+    url(../img/bg-about.webp) center center no-repeat;
+  background-size: cover;
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+.page-header .breadcrumb-item,
+.page-header .breadcrumb-item a {
+  font-size: 18px;
+  color: var(--light);
+}
+
+/*** About ***/
+#about-left {
+  background-image: url("../img/bg-somos3.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/*** Facts ***/
+.facts {
+  position: relative;
+  margin: 6rem 0;
+  background: var(--dark);
+}
+
+.facts .border {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* =====================================================
+   1) Contenedor principal de la galería (Flex de 2 columnas)
+   ===================================================== */
+.tiled-gallery {
+  display: flex;
+  width: 100%;
+  height: 0;
+  /* La altura se establecerá en el JS */
+  gap: 0.5rem;
+  /* Espacio horizontal entre columnas */
+  overflow: hidden;
+}
+
+.tiled-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* =====================================================
+   2) Left Column (50% ancho), dividida en 2 filas:
+       - Fila superior (2fr)
+       - Fila inferior (1fr) con 2 columnas internas
+   ===================================================== */
+.tiled-gallery .left-column {
+  display: grid;
+  width: 50%;
+  grid-template-rows: 2fr 1fr;
+  gap: 0.5rem;
+  /* Separación vertical entre filas */
+  height: 100%;
+  min-height: 0;
+}
+
+.tiled-gallery .left-column .top-image {
+  grid-row: 1 / 2;
+}
+
+.tiled-gallery .left-column .bottom-row {
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  /* Separación entre las dos columnas */
+  height: 100%;
+}
+
+/* =====================================================
+   3) Right Column (50% ancho), dividida en 3 filas iguales:
+       Aquí asignamos cada fila con una altura calculada:
+       La altura total (100%) menos los gaps (2 x 0.5rem = 1rem),
+       repartida en 3 celdas de igual tamaño.
+   ===================================================== */
+.tiled-gallery .right-column {
+  display: grid;
+  width: 50%;
+  height: 100%;
+  gap: 0.5rem;
+  /* Aplica tanto para filas como para columnas, en este caso filas */
+  /* Se definen 3 filas con la altura calculada */
+  grid-template-rows: calc((100% - 1rem) / 3) calc((100% - 1rem) / 3) calc(
+      (100% - 1rem) / 3
+    );
+  min-height: 0;
+}
+
+.tiled-gallery .right-column .item4,
+.tiled-gallery .right-column .item5,
+.tiled-gallery .right-column .item6 {
+  width: 100%;
+  height: 100%;
+}
+
+.right-column .item5 {
+  grid-row: 2 / 3;
+}
+
+@media (max-width: 450px) {
+  #galleryContainer {
+    height: calc(50% - 1rem);
+    /* Reduce el alto a la mitad */
+  }
+}
+
+/*** Features ***/
+#features {
+  background-image: url("../img/bg-section-somos.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#videoPlayButton {
+  width: 120px;
+  height: 120px;
+}
+
+/* Estilos para los recortes superiores e inferiores */
+.features-top-shape,
+.features-bottom-shape,
+.features-bottom-shape-service {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 60px;
+}
+
+.features-top-shape {
+  top: -3px !important;
+}
+
+.features-bottom-shape {
+  bottom: -3px !important;
+  transform: rotate(180deg);
+}
+
+.features-bottom-shape-service {
+  transform: rotate(180deg);
+}
+
+/* Esto asegura que los SVG estén encima del fondo pero detrás del contenido */
+.features-shape svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.svg-wave {
+  width: 100%;
+  height: 70px;
+  max-height: 70px;
+  /* Limita el crecimiento excesivo */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .svg-wave {
+    height: 70px;
+    /* Más alto en móviles */
+  }
+}
+
+@media (min-width: 1200px) {
+  .svg-wave {
+    height: 70px;
+
+    /* Ligeramente menor en pantallas grandes */
+  }
+}
+
+.features-content span,
+.feature-title {
+  color: var(--light);
+}
+
+/* Ajustes generales */
+.section-full {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 15px;
+  color: #333;
+}
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content p,
+.content li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.content ul {
+  padding-left: 1.25rem;
+}
+
+/* Gradientes suaves para cada sección */
+.bg-compra {
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+}
+
+.bg-reparacion {
+  background: linear-gradient(135deg, #fce4ec 0%, #ffffff 100%);
+}
+
+.bg-almacenamiento {
+  background: linear-gradient(135deg, #ede7f6 0%, #ffffff 100%);
+}
+
+#carouselCompra .carousel-inner .carousel-item img,
+#carouselReconformacion .carousel-inner .carousel-item img,
+#carouselAlmacenamiento .carousel-inner .carousel-item img,
+#carouselDestruccion .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+.btn-play {
+  position: absolute;
+  top: 50%;
+  right: 43.5%;
+  transform: translateY(-50%);
+  display: block;
+  box-sizing: content-box;
+  width: 16px;
+  height: 26px;
+  border-radius: 100%;
+  border: none;
+  outline: none !important;
+  padding: 18px 20px 20px 28px;
+  background: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .btn-play {
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.btn-play:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 100%;
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 100%;
+  transition: all 200ms;
+}
+
+.btn-play span {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  left: -1px;
+  border-left: 16px solid #ffffff;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+    opacity: 0;
+  }
+}
+
+.modal-video .modal-dialog {
+  position: relative;
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+}
+
+.modal-video .modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+.modal-video .close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0px;
+  top: -30px;
+  z-index: 999;
+  font-size: 30px;
+  font-weight: normal;
+  color: #ffffff;
+  background: #000000;
+  opacity: 1;
+}
+
+/* ======================
+ESTILOS PARA LOS PRODUCTOS DE FEATURES
+====================== */
+
+.product-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  height: 180px;
+  object-fit: contain;
+}
+
+/* ======================
+ESTILOS PARA EL CAROUSEL LOGISTICA
+====================== */
+
+#logisticaCarousel .carousel-inner {
+  height: auto;
+  background-color: #f5f5f5 !important;
+}
+
+#logisticaCarousel .carousel-item img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+/* ======================
+     ESTILOS PARA LOS BOTONES
+     ====================== */
+.image-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+}
+
+.image-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.image-button:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.image-button:hover img {
+  transform: scale(1.1);
+}
+
+.thumb {
+  height: 150px;
+  object-fit: cover;
+}
+
+/*** Mision y Vision ***/
+.mision-vision-bg {
+  background-image: url("../img/mision.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.vision-bg {
+  background-image: url("../img/vision.webp");
+}
+
+.shadown-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mision-vision-color {
+  color: #ff7637;
+}
+
+/*** Service ***/
+#service-section .title-service {
+  max-width: 600px;
+}
+
+.service-item {
+  position: relative;
+  margin: 65px 0 25px 0;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+
+.service-item .service-img {
+  position: absolute;
+  padding: 12px;
+  width: 130px;
+  height: 130px;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.09);
+  z-index: 2;
+}
+
+.service-item .service-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-item .service-title {
+  position: absolute;
+  padding: 65px 30px 25px 30px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  transition: 0.5s;
+}
+
+.service-item:hover .service-title {
+  top: -100%;
+}
+
+.service-item .service-text {
+  position: absolute;
+  overflow: hidden;
+  padding: 65px 30px 25px 30px;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: rgba(2, 36, 91, 0.7);
+  transition: 0.5s;
+}
+
+.service-item:hover .service-text {
+  top: 0;
+}
+
+.service-item .service-text::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100px;
+  top: -100%;
+  left: 0;
+  transform: skewY(-12deg);
+  background: #ffffff;
+  transition: 0.5s;
+}
+
+.service-item:hover .service-text::before {
+  top: -55px;
+}
+
+.service-text {
+  font-size: 0.9rem;
+}
+
+.service-item .btn {
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  left: 50%;
+  bottom: -25px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.09);
+  z-index: 2;
+}
+
+.service-item .btn:hover {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+/*** Project ***/
+.project-carousel {
+  position: relative;
+  background: var(--dark);
+}
+
+.project-item {
+  position: relative;
+  display: block;
+}
+
+.project-item img {
+  transition: 0.5s;
+}
+
+.project-item:hover img,
+.project-carousel .owl-item.center img {
+  margin-top: -60px;
+}
+
+.project-item .project-title {
+  position: absolute;
+  padding: 0 15px;
+  width: 100%;
+  height: 80px;
+  bottom: -110px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--dark);
+  transition: 0.5s;
+}
+
+.project-item:hover .project-title,
+.project-carousel .owl-item.center .project-title {
+  bottom: -60px;
+}
+
+.project-item .project-title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30px;
+  top: -15px;
+  left: 0;
+  transform: skewY(-5deg);
+  background: var(--dark);
+  transition: 0.5s;
+}
+
+.project-carousel .owl-nav {
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.project-carousel:hover .owl-nav {
+  opacity: 1;
+}
+
+.project-carousel .owl-nav .owl-prev,
+.project-carousel .owl-nav .owl-next {
+  margin: 0 30px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: var(--primary);
+  border-radius: 45px;
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+/*** Contacto ***/
+.btn-contact {
+  width: 90px;
+  height: 90px;
+}
+
+.map-contact {
+  min-height: 450px;
+  border: 0;
+}
+
+.form-control {
+  height: 150px;
+}
+
+.text-message {
+  height: 150px !important;
+}
+
+/*** Footer ***/
+.footer {
+  color: #b0b9ae;
+}
+
+.footer .btn.btn-link {
+  display: block;
+  margin-bottom: 5px;
+  padding: 0;
+  text-align: left;
+  color: #b0b9ae;
+  font-weight: normal;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+
+.footer .btn.btn-link::before {
+  position: relative;
+  content: "\f105";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+  color: var(--light);
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+#frame-map {
+  height: 150px;
+  border: 0;
+}
+
+/* Para pantallas móviles (<= 767px) */
+@media (max-width: 767px) {
+  #frame-map {
+    height: 250px !important;
+  }
+}
+
+.copyright {
+  color: #b0b9ae;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-copyright,
+.text-designed {
+  color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* =====================================================================
+   ESTADO MÓVIL
+=====================================================================
+*/
+@media (max-width: 1049.98px) {
+    .navbar-nav{
+        padding: 1.5rem !important;
     }
 
     /* Muestra el botón de hamburguesa */
     .navbar-expand-lg .navbar-toggler {
-        display: block !important;
+        display: block;
     }
 
-    /* Oculta elementos de escritorio (botón WhatsApp) que usan 'd-lg-inline-flex' */
-    .navbar-expand-lg .d-lg-inline-flex {
+    /* Oculta el menú de escritorio por defecto */
+    .navbar-expand-lg .navbar-collapse {
         display: none !important;
+        /* Estilos para el menú desplegable */
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 100%; /* Se despliega desde abajo de la barra */
+        background-color: var(--bs-white, #fff);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
     
-    /* Fuerza a los enlaces del menú (que usan 'd-lg-flex') a comportarse 
-       como en móvil (display: block)
-    */
-    .navbar-expand-lg .navbar-nav .nav-link.d-lg-flex {
+    /* Regla para que el JS de Bootstrap lo muestre al hacer clic */
+    .navbar-expand-lg .navbar-collapse.show {
         display: block !important;
     }
-}
 
-
-/* 2. REGLAS PARA MÓVIL (COLAPSADO)*/
-@media (max-width: 1049.98px) { /* ANTES: 991.98px */
-
-    /* Menu links adjust */
-    .navbar .navbar-nav .nav-link {
-        margin-right: 0;
-        padding: 10px 0;
+    /* Oculta el botón de WhatsApp de escritorio */
+    .navbar .d-none.d-lg-inline-flex {
+        display: none !important;
     }
 
-    .navbar .navbar-nav {
-        border-top: 1px solid #EEEEEE;
-        width: 100%;
-    }
-
-    /* Center the brand/logo */
+    /* Centra el logo (como en tu foto) */
     .navbar .navbar-brand {
         left: 0px;
         right: 0px;
@@ -257,13 +1154,98 @@ h3, .h3{
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
+    /* Estilos para los items del menú móvil */
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        border-top: 1px solid #EEEEEE;
+        padding-bottom: 1rem;
+    }
+    .navbar .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        /* Fuerza el texto del link a la izquierda */
+        text-align: left !important; 
+    }
+    .navbar .navbar-nav .nav-link.d-lg-flex {
+        display: flex !important;
+        flex-direction: row !important;      
+        align-items: center !important;    
+        justify-content: flex-start !important;
+        padding: 10px 0 !important;
+        margin-right: 0 !important;
+        border-bottom: 1px solid #EEEEEE;
+    }
+
+    /* Quita el centrado del icono y le da espacio */
+    .navbar .navbar-nav .nav-link .bi {
+        text-align: left !important;
+        margin-right: 10px;
+        width: 20px;
+    }
+
+    .navbar .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
 }
 
-/* 3. REGLAS PARA DESKTOP (EXPANDIDO):
-  media query original de 992px a 1050px.
-  todos los estilos de escritorio se aplicarán desde 1050px.
+/* =====================================================================
+  REGLA 2: ESTADO ESCRITORIO (Desde 1050px en adelante)
+=====================================================================
 */
-@media (min-width: 1050px) { /* ANTES: 992px */
+@media (min-width: 1050px) {
+
+    /* Oculta el botón de hamburguesa */
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+
+    /* Muestra el menú de escritorio */
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        /* Resetea los estilos de menú móvil */
+        position: static;
+        width: auto;
+        left: auto;
+        top: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 1rem;
+    }
+
+    /* Muestra los links en fila */
+    .navbar-expand-lg .navbar-nav {
+        flex-direction: row;
+        border-top: none;
+        padding-bottom: 0;
+    }
+    .navbar-expand-lg .navbar-nav .nav-item {
+        width: auto;
+    }
+    /* Vuelve a poner los links de escritorio (icono arriba) */
+    .navbar .navbar-nav .nav-link.d-lg-flex {
+        flex-direction: column;
+        padding: 20px 0 !important;
+        margin-right: 35px !important;
+        border-bottom: none;
+    }
+
+    /* Muestra el botón de WhatsApp de escritorio */
+    .navbar .d-none.d-lg-inline-flex {
+        display: inline-flex !important;
+    }
+    
+    /* Pone el logo a la izquierda */
+    .navbar .navbar-brand {
+        left: auto;
+        right: auto;
+        margin: 0;
+        padding-left: 3rem !important;
+    }
 
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -274,823 +1256,38 @@ h3, .h3{
         visibility: hidden;
         transition: .5s;
     }
-
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
         transition: .5s;
         opacity: 1;
     }
-
     .nav-icon-text {
         display: inline-flex;
         align-items: center;
     }
-
     .nav-icon-text i {
         margin-top: 0;
     }
-    
-    /* Restauramos los estilos de escritorio que se 
-       anularon en el media query de móvil 
-    */
-    .navbar .navbar-nav .nav-link {
-        margin-right: 35px;
-        padding: 20px 0;
-    }
-    .navbar .navbar-brand {
-         left: auto;
-         right: auto;
-         margin: 0;
-         padding-left: 3rem !important;
-     }
 }
 
-/*** WhatsApp Floating (mobile) ***/
-.back-to-whatsapp {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 90px;
-    z-index: 99;
-}
-
-/* Mostrar ambos botones en pantallas < 992px */
-@media (max-width: 991.98px) {
-    .back-to-top {
-        display: inline-flex;
-    }
-
-    .back-to-whatsapp {
-        display: inline-flex;
-    }
-}
-
-/* Ajustes solo en móviles (pantallas menores a 576px) */
-@media (max-width: 575.98px) {
-
-    .back-to-top,
-    .back-to-whatsapp {
-        right: 15px;
-    }
-}
-
-/*** Header ***/
-.carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%);
-    z-index: 1;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: var(--primary);
-    border: 15px solid var(--primary);
-    border-radius: 3.5rem;
-}
-
-@media (max-width: 768px) {
-    #header-carousel .carousel-item {
-        position: relative;
-        min-height: 450px;
-    }
-
-    #header-carousel .carousel-item img {
-        position: absolute;
+@media (max-width: 347px) {
+    #logo{
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-.page-header {
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%), url(../img/bg-about.webp) center center no-repeat;
-    background-size: cover;
-}
-
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--light);
-}
-
-.page-header .breadcrumb-item,
-.page-header .breadcrumb-item a {
-    font-size: 18px;
-    color: var(--light);
-}
-
-/*** About ***/
-#about-left {
-    background-image: url("../img/bg-somos3.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/*** Facts ***/
-.facts {
-    position: relative;
-    margin: 6rem 0;
-    background: var(--dark);
-}
-
-.facts .border {
-    border-color: rgba(255, 255, 255, .1) !important;
-}
-
-/* =====================================================
-   1) Contenedor principal de la galería (Flex de 2 columnas)
-   ===================================================== */
-.tiled-gallery {
-    display: flex;
-    width: 100%;
-    height: 0;
-    /* La altura se establecerá en el JS */
-    gap: 0.5rem;
-    /* Espacio horizontal entre columnas */
-    overflow: hidden;
-}
-
-.tiled-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
-}
-
-/* =====================================================
-   2) Left Column (50% ancho), dividida en 2 filas:
-       - Fila superior (2fr)
-       - Fila inferior (1fr) con 2 columnas internas
-   ===================================================== */
-.tiled-gallery .left-column {
-    display: grid;
-    width: 50%;
-    grid-template-rows: 2fr 1fr;
-    gap: 0.5rem;
-    /* Separación vertical entre filas */
-    height: 100%;
-    min-height: 0;
-}
-
-.tiled-gallery .left-column .top-image {
-    grid-row: 1 / 2;
-}
-
-.tiled-gallery .left-column .bottom-row {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
-    /* Separación entre las dos columnas */
-    height: 100%;
-}
-
-/* =====================================================
-   3) Right Column (50% ancho), dividida en 3 filas iguales:
-       Aquí asignamos cada fila con una altura calculada:
-       La altura total (100%) menos los gaps (2 x 0.5rem = 1rem),
-       repartida en 3 celdas de igual tamaño.
-   ===================================================== */
-.tiled-gallery .right-column {
-    display: grid;
-    width: 50%;
-    height: 100%;
-    gap: 0.5rem;
-    /* Aplica tanto para filas como para columnas, en este caso filas */
-    /* Se definen 3 filas con la altura calculada */
-    grid-template-rows:
-        calc((100% - 1rem) / 3) calc((100% - 1rem) / 3) calc((100% - 1rem) / 3);
-    min-height: 0;
-}
-
-.tiled-gallery .right-column .item4,
-.tiled-gallery .right-column .item5,
-.tiled-gallery .right-column .item6 {
-    width: 100%;
-    height: 100%;
-}
-
-.right-column .item5 {
-    grid-row: 2 / 3;
-}
-
-
-@media (max-width: 450px) {
-    #galleryContainer {
-        height: calc(50% - 1rem);
-        /* Reduce el alto a la mitad */
-    }
-}
-
-/*** Features ***/
-#features {
-    background-image: url("../img/bg-section-somos.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-#videoPlayButton {
-    width: 120px;
-    height: 120px;
-}
-
-/* Estilos para los recortes superiores e inferiores */
-.features-top-shape,
-.features-bottom-shape,
-.features-bottom-shape-service {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 60px;
-}
-
-
-.features-top-shape {
-    top: -3px !important;
-}
-
-.features-bottom-shape {
-    bottom: -3px !important;
-    transform: rotate(180deg);
-}
-
-.features-bottom-shape-service {
-    transform: rotate(180deg);
-}
-
-/* Esto asegura que los SVG estén encima del fondo pero detrás del contenido */
-.features-shape svg {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.svg-wave {
-    width: 100%;
-    height: 70px;
-    max-height: 70px;
-    /* Limita el crecimiento excesivo */
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .svg-wave {
-        height: 70px;
-        /* Más alto en móviles */
-    }
-}
-
-@media (min-width: 1200px) {
-    .svg-wave {
-        height: 70px;
-
-        /* Ligeramente menor en pantallas grandes */
-    }
-}
-
-.features-content span,
-.feature-title {
-    color: var(--light);
-}
-
-/* Ajustes generales */
-.section-full {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 60px 15px;
-    color: #333;
-}
-
-.content h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.content p,
-.content li {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-}
-
-.content ul {
-    padding-left: 1.25rem;
-}
-
-/* Gradientes suaves para cada sección */
-.bg-compra {
-    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
-}
-
-.bg-reparacion {
-    background: linear-gradient(135deg, #fce4ec 0%, #ffffff 100%);
-}
-
-.bg-almacenamiento {
-    background: linear-gradient(135deg, #ede7f6 0%, #ffffff 100%);
-}
-
-#carouselCompra .carousel-inner .carousel-item img,
-#carouselReconformacion .carousel-inner .carousel-item img,
-#carouselAlmacenamiento .carousel-inner .carousel-item img,
-#carouselDestruccion .carousel-inner .carousel-item img {
-    width: 100%;
-    height: 400px;
-    object-fit: contain;
-}
-
-.btn-play {
-    position: absolute;
-    top: 50%;
-    right: 43.5%;
-    transform: translateY(-50%);
-    display: block;
-    box-sizing: content-box;
-    width: 16px;
-    height: 26px;
-    border-radius: 100%;
-    border: none;
-    outline: none !important;
-    padding: 18px 20px 20px 28px;
-    background: var(--primary);
-}
-
-@media (max-width: 992px) {
-    .btn-play {
-        left: 50%;
-        right: auto;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.btn-play:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    border-radius: 100%;
-    animation: pulse-border 1500ms ease-out infinite;
-}
-
-.btn-play:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    border-radius: 100%;
-    transition: all 200ms;
-}
-
-.btn-play span {
-    display: block;
-    position: relative;
-    z-index: 3;
-    width: 0;
-    height: 0;
-    left: -1px;
-    border-left: 16px solid #FFFFFF;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
-}
-
-@keyframes pulse-border {
-    0% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
+        height: auto;
+        min-height: 70px;
     }
 
-    100% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
-        opacity: 0;
+    .navbar{
+        display: flex;
+        padding: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
     }
-}
 
-.modal-video .modal-dialog {
-    position: relative;
-    max-width: 800px;
-    margin: 60px auto 0 auto;
-}
-
-.modal-video .modal-body {
-    position: relative;
-    padding: 0px;
-}
-
-.modal-video .close {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: 0px;
-    top: -30px;
-    z-index: 999;
-    font-size: 30px;
-    font-weight: normal;
-    color: #FFFFFF;
-    background: #000000;
-    opacity: 1;
-}
-
-/* ======================
-ESTILOS PARA LOS PRODUCTOS DE FEATURES
-====================== */
-
-.product-card {
-    border: none;
-    border-radius: 1rem;
-    transition: transform .3s, box-shadow .3s;
-    overflow: hidden;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-}
-
-.product-card img {
-    height: 180px;
-    object-fit: contain;
-}
-
-/* ======================
-ESTILOS PARA EL CAROUSEL LOGISTICA
-====================== */
-
-#logisticaCarousel .carousel-inner {
-    height: auto;
-    background-color: #f5f5f5 !important;
-}
-
-
-#logisticaCarousel .carousel-item img {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-}
-
-/* ======================
-     ESTILOS PARA LOS BOTONES
-     ====================== */
-.image-button {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    width: 150px;
-    height: 150px;
-    border: 2px solid var(--primary);
-    border-radius: 4px;
-}
-
-.image-button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.image-button::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.3s ease;
-}
-
-.image-button:hover::before {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.image-button:hover img {
-    transform: scale(1.1);
-}
-
-.thumb {
-    height: 150px;
-    object-fit: cover;
-}
-
-/*** Mision y Vision ***/
-.mision-vision-bg {
-    background-image: url('../img/mision.webp');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-.vision-bg {
-    background-image: url('../img/vision.webp');
-}
-
-.shadown-bg {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.mision-vision-color {
-    color: #ff7637
-}
-
-/*** Service ***/
-#service-section .title-service {
-    max-width: 600px;
-}
-
-.service-item {
-    position: relative;
-    margin: 65px 0 25px 0;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
-    cursor: pointer;
-}
-
-.service-item .service-img {
-    position: absolute;
-    padding: 12px;
-    width: 130px;
-    height: 130px;
-    top: -65px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #FFFFFF;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
-    z-index: 2;
-}
-
-.service-item .service-detail {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.service-item .service-title {
-    position: absolute;
-    padding: 65px 30px 25px 30px;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: #FFFFFF;
-    transition: .5s;
-}
-
-.service-item:hover .service-title {
-    top: -100%;
-}
-
-.service-item .service-text {
-    position: absolute;
-    overflow: hidden;
-    padding: 65px 30px 25px 30px;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    left: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background: rgba(2, 36, 91, .7);
-    transition: .5s;
-}
-
-.service-item:hover .service-text {
-    top: 0;
-}
-
-.service-item .service-text::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100px;
-    top: -100%;
-    left: 0;
-    transform: skewY(-12deg);
-    background: #FFFFFF;
-    transition: .5s;
-}
-
-.service-item:hover .service-text::before {
-    top: -55px;
-}
-
-.service-text{
-    font-size: 0.9rem ;
-}
-
-.service-item .btn {
-    position: absolute;
-    width: 130px;
-    height: 50px;
-    left: 50%;
-    bottom: -25px;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary);
-    background: #FFFFFF;
-    border: none;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .09);
-    z-index: 2;
-}
-
-.service-item .btn:hover {
-    color: #FFFFFF;
-    background: var(--primary);
-}
-
-
-/*** Project ***/
-.project-carousel {
-    position: relative;
-    background: var(--dark);
-}
-
-.project-item {
-    position: relative;
-    display: block;
-}
-
-.project-item img {
-    transition: .5s;
-}
-
-.project-item:hover img,
-.project-carousel .owl-item.center img {
-    margin-top: -60px;
-}
-
-.project-item .project-title {
-    position: absolute;
-    padding: 0 15px;
-    width: 100%;
-    height: 80px;
-    bottom: -110px;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: var(--dark);
-    transition: .5s;
-}
-
-.project-item:hover .project-title,
-.project-carousel .owl-item.center .project-title {
-    bottom: -60px;
-}
-
-.project-item .project-title::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 30px;
-    top: -15px;
-    left: 0;
-    transform: skewY(-5deg);
-    background: var(--dark);
-    transition: .5s;
-}
-
-.project-carousel .owl-nav {
-    position: absolute;
-    width: 100%;
-    height: 45px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    transition: .5s;
-    opacity: 0;
-    z-index: 1;
-}
-
-.project-carousel:hover .owl-nav {
-    opacity: 1;
-}
-
-.project-carousel .owl-nav .owl-prev,
-.project-carousel .owl-nav .owl-next {
-    margin: 0 30px;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    background: var(--primary);
-    border-radius: 45px;
-    font-size: 22px;
-    transition: .5s;
-}
-
-/*** Contacto ***/
-.btn-contact {
-    width: 90px;
-    height: 90px;
-}
-
-.map-contact {
-    min-height: 450px;
-    border: 0;
-}
-
-.form-control{
-    height: 150px;
-}
-
-.text-message {
-    height: 150px !important;
-}
-
-/*** Footer ***/
-.footer {
-    color: #B0B9AE;
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 5px;
-    padding: 0;
-    text-align: left;
-    color: #B0B9AE;
-    font-weight: normal;
-    text-transform: capitalize;
-    transition: .3s;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    color: var(--light);
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-#frame-map {
-    height: 150px;
-    border: 0;
-}
-
-/* Para pantallas móviles (<= 767px) */
-@media (max-width: 767px) {
-    #frame-map {
-        height: 250px !important;
+    .navbar-toggler {
+        margin: 0.5rem;
+        float: none;
     }
-}
-
-.copyright {
-    color: #B0B9AE;
-    border-top: 1px solid rgba(255, 255, 255, .1);
-}
-
-.text-copyright,
-.text-designed {
-    color: var(--primary);
-}
-
-.btn-primary {
-    background: var(--primary);
-    border: 1px solid var(--primary);
 }
