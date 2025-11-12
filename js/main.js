@@ -9,7 +9,7 @@
             }
             // Muestra el contenido de la página con un "fade-in".
             $('#page-content').css({ 'opacity': 1, 'visibility': 'visible' });
-        }, 500);
+        }, 300);
     };
     
     $(window).on('load', function() {
